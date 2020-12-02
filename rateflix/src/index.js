@@ -1,6 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+var Express=require('express')
+var app=Express();
+var TVShow=require('./TVShows');
+
 const divStyle={
           position: 'fixed',
           top: '35%',
@@ -52,5 +56,11 @@ class FinalTouch extends React.Component {
         )
     }
 }
-ReactDOM.render(<FinalTouch />,document.getElementById('root'));
+
+app.get('/', function(req,res) {
+    res.send(ReactDOM.render(<FinalTouch />,document.getElementById('root')));
+})
+
+app.listen(2000);
+
 
