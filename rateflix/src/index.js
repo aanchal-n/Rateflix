@@ -1,21 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-var Express=require('express')
-var app=Express();
-var TVShow=require('./TVShows');
-var mongo=require('mongodb');
-
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/mydb";
-
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  console.log("Database created!");
-  db.close();
-});
-
-
 const divStyle={
           position: 'fixed',
           top: '35%',
@@ -68,10 +53,7 @@ class FinalTouch extends React.Component {
     }
 }
 
-app.get('/', function(req,res) {
-    res.send(ReactDOM.render(<FinalTouch />,document.getElementById('root')));
-})
+ReactDOM.render(<FinalTouch />,document.getElementById('root'))
 
-app.listen(2000);
 
 
