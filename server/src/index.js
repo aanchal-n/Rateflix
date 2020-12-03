@@ -2,7 +2,8 @@ const express=require('express')
 const bodyParser=require('body-parser')
 const cors=require('cors')
 
-const db=require('./db')
+const dbMovie=require('./db/movies')
+const dbTV=require('./db/tvshows')
 const RateflixRouter=require('./routes/rateflix-router')
 
 const app=express()
