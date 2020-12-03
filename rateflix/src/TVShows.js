@@ -81,7 +81,4 @@ class Site extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <Site />,
-    document.getElementById('root')
-);
+export default Site
