@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TVShows from './TVShows'
+import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 const divStyle={
           position: 'fixed',
@@ -33,7 +35,19 @@ class MovieButton extends React.Component {
     }
 
 class TVShowButton extends React.Component {
-    
+    constructor(props) {
+        super(props);
+        this.state={TVShowslist:[]}
+    }
+    componentDidMount() {
+        axios.get('http://localhost:4000/TVShows')
+            .then(response => {
+                this.setState({ todos: response.data });
+            })
+            .catch(function (error){
+                console.log(error);
+            })
+    }
     render() {
           return (
             <button style={buttonStyle} onClick={(e) => {
@@ -43,7 +57,8 @@ class TVShowButton extends React.Component {
                                         < TVShows />
                                     </React.StrictMode>,
                                     document.getElementById('root')
-                                )}}>TV SHOWS</button>
+                                )
+                            }}>TV SHOWS</button>
               );
         }
   }
