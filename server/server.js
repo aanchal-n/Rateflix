@@ -26,6 +26,17 @@ RateflixRoutes.route('/TVShows').get(function(req, res) {
     });
 });
 
+RateflixRoutes.route('/Movies').get(function(req, res) {
+    TVShow.find(function(err, TVShows) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(TVShows);
+        }
+    });
+});
+
+
 app.use('/', RateflixRoutes);
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);

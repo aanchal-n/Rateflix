@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TVShows from './TVShows'
-//import index from '../../Myapp/src/App'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import App from './App'
 
 const divStyle={
           position: 'fixed',
@@ -25,18 +24,28 @@ class MyMainPage extends React.Component {
 }
 
 class MovieButton extends React.Component {
-    
+    constructor(props) {
+        super(props);
+        this.state={TVShowslist:[]}
+    }
+    componentDidMount() {
+        axios.get('http://localhost:4000/Movies')
+            .then(response => {
+                this.setState({ todos: response.data });
+            })
+            .catch(function (error){
+                console.log(error);
+            })
+    }
       render() {
             return (
               <button style={buttonStyle} onClick={(e) => {
                                   e.preventDefault();
                                   window.location.href='./Movies'
-                                  /*ReactDOM.render(
-                                    <React.StrictMode>
-                                        < App />
-                                    </React.StrictMode>,
+                                  ReactDOM.render(
+                                        <App />,
                                     document.getElementById('root')
-                                )*/;}}>MOVIES</button>
+                                );}}>MOVIES</button>
                 );
           }
     }
