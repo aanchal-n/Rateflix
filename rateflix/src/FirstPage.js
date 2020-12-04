@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TVShows from './TVShows'
+//import index from '../../Myapp/src/App'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 
@@ -29,7 +30,13 @@ class MovieButton extends React.Component {
             return (
               <button style={buttonStyle} onClick={(e) => {
                                   e.preventDefault();
-                                  window.location.href='./Movies.js';}}>MOVIES</button>
+                                  window.location.href='./Movies'
+                                  /*ReactDOM.render(
+                                    <React.StrictMode>
+                                        < App />
+                                    </React.StrictMode>,
+                                    document.getElementById('root')
+                                )*/;}}>MOVIES</button>
                 );
           }
     }
