@@ -34,7 +34,7 @@ class MovieButton extends React.Component {
         this.state={TVShowslist:[]}
     }
     componentDidMount() {
-        axios.get('http://localhost:4000/Movies')
+        axios.get('http://localhost:3000/Movies')
             .then(response => {
                 this.setState({ todos: response.data });
             })
@@ -64,7 +64,7 @@ class TVShowButton extends React.Component {
         this.state={TVShowslist:[]}
     }
     componentDidMount() {
-        axios.get('http://localhost:4000/TVShows')
+        axios.get('http://localhost:3000/TVShows')
             .then(response => {
                 this.setState({ todos: response.data });
             })
