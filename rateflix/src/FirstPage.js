@@ -18,8 +18,7 @@ const buttonStyle={
 class MyMainPage extends React.Component {
     render () {
         return (
-                <h1 style={h1Style}> RATEFLIX </h1>,
-                <body style={{color: "red"}}></body>)
+                <h1 style={h1Style}> RATEFLIX </h1>)
     }
 }
 
@@ -70,7 +69,7 @@ class TVShowButton extends React.Component {
     render() {
           return (
             <button style={buttonStyle} onClick={(e) => {
-                                //window.location.href='./TVshows.js';
+                                //window.location.href='./TVshows';
                                 ReactDOM.render(
                                     <React.StrictMode>
                                         < TVShows />
