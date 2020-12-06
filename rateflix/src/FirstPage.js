@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import TVShows from './TVShows'
 import axios from 'axios'
-import App from './App'
 
 const divStyle={
           position: 'fixed',
@@ -41,9 +40,8 @@ class MovieButton extends React.Component {
             return (
               <button style={buttonStyle} onClick={(e) => {
                                   e.preventDefault();
-                                  window.location.href='./Movies'
-                                  ReactDOM.render(
-                                        <App />,
+                                  //window.location.href='./Movies'
+                                  ReactDOM.render(<h1> It works</h1>,
                                     document.getElementById('root')
                                 );}}>MOVIES</button>
                 );

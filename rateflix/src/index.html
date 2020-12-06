@@ -1,0 +1,49 @@
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>React App</title>
+  </head>
+  <body style="background-color:black">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.tooltipped');
+        var instances = M.Tooltip.init(elems);
+      });
+      $(document).ready(function() {
+      M.toast({html: 'Click the RATEFLIX logo for a hint on how to interact with this page!'});
+      });
+      $(document).ready(function(){
+        $('.tap-target').tapTarget();
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('tap').onclick(function(){  
+    var elem = document.querySelectorAll('.tap-target');
+    var instance = M.TapTarget.init(elem);})
+  });
+    </script>
+    <style>
+      img {
+        width:300;
+        height: 500;
+      }
+      .checked {
+      color: white;
+    }
+    </style>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
