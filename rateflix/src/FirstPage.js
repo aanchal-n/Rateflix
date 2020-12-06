@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import TVShows from './TVShows'
 import axios from 'axios'
-
+import Movies from './Movies'
 const divStyle={
           position: 'fixed',
           top: '35%',
@@ -18,7 +18,8 @@ const buttonStyle={
 class MyMainPage extends React.Component {
     render () {
         return (
-                <h1 style={h1Style}> RATEFLIX </h1>)
+                <h1 style={h1Style}> RATEFLIX </h1>,
+                <body style={{color: "red"}}></body>)
     }
 }
 
@@ -41,7 +42,11 @@ class MovieButton extends React.Component {
               <button style={buttonStyle} onClick={(e) => {
                                   e.preventDefault();
                                   //window.location.href='./Movies'
-                                  ReactDOM.render(<h1> It works</h1>,
+                                  ReactDOM.render(
+                                      <React.StrictMode>
+                                        <Movies/>
+                                      </React.StrictMode>,
+                                      
                                     document.getElementById('root')
                                 );}}>MOVIES</button>
                 );
