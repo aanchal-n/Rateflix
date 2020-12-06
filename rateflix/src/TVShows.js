@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 import FriendsImg from "./Assets/posters/TVShows/Friends.jpg"
 import FriendsAudio from './Assets/Songs/TVShows-Song/Friends.mp3'
 import StrangerThingsImg from './Assets/posters/TVShows/Stranger Things.jpg'
@@ -64,152 +65,242 @@ import WalkingdeadAudio from './Assets/Songs/TVShows-Song/Walking dead.mp3'
 const imagePath=[{
     name: 'Friends',
     isrc: FriendsImg,
-    asrc: FriendsAudio
+    asrc: FriendsAudio,
+    year: '1994' ,
+    ratings: '8.9' ,
+    category: "Comedy,Romance",
 },
 {
     name: 'Stranger Things',
     isrc: StrangerThingsImg,
-    asrc: StrangerThingsAudio
+    asrc: StrangerThingsAudio,
+    year: '2016' ,
+    ratings: '8.8' ,
+    category: "Drama,Fantasy",
 },
 {
     name: 'American horror story',
     isrc: AmericanHorrorStoryImg,
-    asrc: AmericanHorrorStoryAudio
+    asrc: AmericanHorrorStoryAudio,
+    year: '2011' ,
+    ratings: '8' ,
+    category: "Drama,Horror",
 },
 {
     name: 'Breaking bad',
     isrc: BreakingBadImg,
-    asrc: BreakingBadAudio
+    asrc: BreakingBadAudio,
+    year: '2008' ,
+    ratings: '9.5' ,
+    category: "Crime,Drama",
 },
 {
     name: 'Brooklyn nine nine',
     isrc: BrooklynNineNineImg,
-    asrc: BrooklynNineNineAudio
+    asrc: BrooklynNineNineAudio,
+    year: '2013' ,
+    ratings: '8.4' ,
+    category: "Comedy,Drama",
 },
 {
     name: 'Dexter',
     isrc: DexterImg,
-    asrc: DexterAudio
+    asrc: DexterAudio,
+    year: '2006' ,
+    ratings: '8.6' ,
+    category: "Crime,Drama",
 },
 {
     name: 'Emily in paris',
     isrc: EmilyInParisImg,
-    asrc: EmilyInParisAudio
+    asrc: EmilyInParisAudio,
+    year: '2020' ,
+    ratings: '7.1' ,
+    category: "Comedy,Drama",
 },
 {
     name: 'Game of Thrones',
     isrc: GameOfThronesImg,
-    asrc: GameOfThronesAudio
+    asrc: GameOfThronesAudio,
+    year: '2011' ,
+    ratings: '9.3' ,
+    category: "Drama,Action",
 },
 {
     name: 'Gilmore girls',
     isrc: GilmoreGirlsImg,
-    asrc: GilmoreGirlsAudio
+    asrc: GilmoreGirlsAudio,
+    year: '2000' ,
+    ratings: '8.1' ,
+    category: "Drama,Comedy",
 },
 {
     name: "Grey's anatomy",
     isrc: GreysAnatomyImg,
-    asrc: GreysAnatomyAudio
+    asrc: GreysAnatomyAudio,
+    year: '2005' ,
+    ratings: '7.6' ,
+    category: "Drama,Romance",
 },
 {
     name:'How I met your mother',
     isrc: HowIMetYourMotherImg,
-    asrc: HowIMetYourMotherAudio
+    asrc: HowIMetYourMotherAudio,
+    year: '2005' ,
+    ratings: '8.3' ,
+    category: "Comedy,Romance",
 },
 {
     name: 'Locke and key',
     isrc: LockeAndKeyImg,
-    asrc: LockeAndKeyAudio
+    asrc: LockeAndKeyAudio,
+    year: '2020' ,
+    ratings: '7.4' ,
+    category: "Drama,Horror",
 },
 {
     name: 'Lucifer',
     isrc: LuciferImg,
-    asrc: LuciferAudio
+    asrc: LuciferAudio,
+    year: '2016' ,
+    ratings: '8.2' ,
+    category: "Drama,Crime",
 },
 {
     name: 'Money heist',
     isrc: MoneyHeistImg,
-    asrc: MoneyHeistAudio
+    asrc: MoneyHeistAudio,
+    year: '2017' ,
+    ratings: '8.4' ,
+    category: "Action,Crime",
 },
 {
     name: 'New girl',
     isrc: NewGirlImg,
-    asrc: NewGirlAudio
+    asrc: NewGirlAudio,
+    year: '2011' ,
+    ratings: '7.7' ,
+    category: "Comedy",
 },
 {
     name: 'Peaky blinders',
     isrc: PeakyBlindersImg,
-    asrc: PeakyBlindersAudio
+    asrc: PeakyBlindersAudio,
+    year: '2013' ,
+    ratings: '8.8' ,
+    category: "Drama,Crime",
 },
 {
     name: 'Riverdale',
     isrc: RiverdaleImg,
-    asrc: RiverdaleAudio
+    asrc: RiverdaleAudio,
+    year: '2017' ,
+    ratings: '6.9' ,
+    category: "Drama,Crime",
 },
 {
     name: 'The mandalorian',
     isrc: TheMandalorianImg,
-    asrc: TheMandalorianAudio
+    asrc: TheMandalorianAudio,
+    year: '2019' ,
+    ratings: '8.7' ,
+    category: "Action,Sci-fi",
 },
 {
     name: 'Scam 1992',
     isrc: Scam1992Img,
-    asrc: Scam1992Audio
+    asrc: Scam1992Audio,
+    year: '2020' ,
+    ratings: '9.5' ,
+    category: "Drama,Crime",
 },
 {
     name: 'Star trek discovery',
     isrc: StarTrekDiscoveryImg,
-    asrc: StarTrekDiscoveryAudio
+    asrc: StarTrekDiscoveryAudio,
+    year: '2017' ,
+    ratings: '7.3' ,
+    category: "Drama,Action",
 },
 {
     name: 'Suits',
     isrc: SuitsImg,
-    asrc: SuitsAudio
+    asrc: SuitsAudio,
+    year: '2011' ,
+    ratings: '8.5' ,
+    category: "Drama,Comedy",
 },
 {
     name: 'Supernatural',
     isrc: SupernaturalImg,
-    asrc: SupernaturalAudio
+    asrc: SupernaturalAudio,
+    year: '2005' ,
+    ratings: '8.4' ,
+    category: "Fantasy,Horror",
 },
 {
     name: 'The 100',
     isrc: The100Img,
-    asrc: The100Audio
+    asrc: The100Audio,
+    year: '2014' ,
+    ratings: '7.6' ,
+    category: "Drama,Sci-fi",
 },
 {
     name: 'The big bang theory',
     isrc: TheBigBangTheoryImg,
-    asrc: TheBigBangTheoryAudio
+    asrc: TheBigBangTheoryAudio,
+    year: '2007' ,
+    ratings: '8.1' ,
+    category: "Comedy,Romance",
 },
 {
     name: 'The crown',
     isrc: TheCrownImg,
-    asrc: TheCrownAudio
+    asrc: TheCrownAudio,
+    year: '2016' ,
+    ratings: '8.7' ,
+    category: "Drama,History",
 },
 {
     name: 'The fresh prince of bel air',
     isrc: TheFreshPrinceOfBelAirImg,
-    asrc: TheFreshPrinceOfBelAirAudio
+    asrc: TheFreshPrinceOfBelAirAudio,
+    year: '1990' ,
+    ratings: '7.9' ,
+    category: "Comedy",
 },
 {
     name: 'The good doctor',
     isrc: TheGoodDoctorImg,
-    asrc: TheGoodDoctorAudio
+    asrc: TheGoodDoctorAudio,
+    year: '2017' ,
+    ratings: '8.2' ,
+    category: "Drama",
 },
 {
     name: 'The office',
     isrc: TheOfficeImg,
-    asrc: TheOfficeAudio
+    asrc: TheOfficeAudio,
+    year: '2005' ,
+    ratings: '8.9' ,
+    category: "Comedy",
 },
 {
     name: 'This is us',
     isrc: ThisIsUsImg,
-    asrc: ThisIsUsAudio
+    asrc: ThisIsUsAudio,
+    year: '2016' ,
+    ratings: '8.7' ,
+    category: "Comedy,Drama",
 },
 {
     name: 'Walking dead',
     isrc: WalkingdeadImg,
-    asrc: WalkingdeadAudio
+    asrc: WalkingdeadAudio,
+    year: '2010' ,
+    ratings: '8.2' ,
+    category: "Drama,Horror",
 }
 ];
 
@@ -230,17 +321,19 @@ class ShowDisplay extends React.Component {
     
     render() {
         
-        var i,imgsrc,audiosrc;
+        var i,imgsrc,audiosrc,rating,year,genre;
         for(i=0;i<imagePath.length;i++)
         {
             if(imagePath[i].name === this.props.name)
             {
                 imgsrc=imagePath[i].isrc;
                 audiosrc=imagePath[i].asrc;
+                rating=imagePath[i].ratings;
+                year=imagePath[i].year;
+                genre=imagePath[i].category;
                 break;
             }
         }
-        const imgid=this.props.name+"Img"
         let audio= new Audio(audiosrc)
         const start= () => {
             audio.play();
@@ -254,14 +347,26 @@ class ShowDisplay extends React.Component {
             fontSize: 20,
             fontFamily: 'Ariel',
         }
+        const bodyStyle={
+            color:"white",
+        }
+        const cardBodyStyle={
+            backgroundColor: "firebrick",
+            width: "300px"
+        }
         return (
-            <div>
-                <h2 style={headerStyle}>{this.props.name}</h2>
-                <img src={imgsrc} id={imgid} alt={this.props.name} height={300} width={300} onMouseEnter={start} onMouseLeave={stop}></img>
-            </div>
+            <Card style={{ width: '18rem', flex:1}}>
+            <Card.Img variant="top" src={imgsrc} width="300" height="300" onMouseEnter={start} onMouseLeave={stop}/>
+            <Card.Body style={cardBodyStyle}>
+        <Card.Title style={headerStyle}>{this.props.name} ({year})</Card.Title>
+        <Card.Subtitle style={{color:"white"}}> {rating} </Card.Subtitle>
+            <Card.Text style={bodyStyle}> Genre: {genre}</Card.Text>
+            </Card.Body>
+            </Card>
         )
     }
 }
+
 class Site extends React.Component {
     render() {
         const bodyStyle={
@@ -271,36 +376,52 @@ class Site extends React.Component {
             <body style={bodyStyle}>
                 <Heading />
                 <hr></hr>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
+                <ShowDisplay name="This is us" />
                 <ShowDisplay name="Friends" />
                 <ShowDisplay name="Stranger Things" />
                 <ShowDisplay name="American horror story" />
-                <ShowDisplay name="Breaking bad" />
+                </CardDeck>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>               
                 <ShowDisplay name="Brooklyn nine nine" />
                 <ShowDisplay name="Dexter" />
                 <ShowDisplay name="Emily in paris" />
                 <ShowDisplay name="Game of Thrones" />
+                </CardDeck> 
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
                 <ShowDisplay name="Gilmore girls" />
                 <ShowDisplay name="Grey's anatomy" />
                 <ShowDisplay name="How I met your mother" />
                 <ShowDisplay name="Locke and key" />
+                </CardDeck>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
                 <ShowDisplay name="Lucifer" />
                 <ShowDisplay name="Money heist" />
                 <ShowDisplay name="New girl" />
                 <ShowDisplay name="Peaky blinders" />
+                </CardDeck>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
                 <ShowDisplay name="Riverdale" />
                 <ShowDisplay name="Scam 1992" />
                 <ShowDisplay name="Star trek discovery" />
                 <ShowDisplay name="Suits" />
+                </CardDeck>
+                <CardDeck style={{display: 'flex', flexDirection: 'row',padding: '25px 50px 25px 75px'}}>
                 <ShowDisplay name="Supernatural" />
                 <ShowDisplay name="The 100" />
                 <ShowDisplay name="The big bang theory" />
                 <ShowDisplay name="The crown" />
+                </CardDeck>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
                 <ShowDisplay name="The fresh prince of bel air" />
                 <ShowDisplay name="The good doctor" />
                 <ShowDisplay name="The mandalorian" />
                 <ShowDisplay name="The office" />
-                <ShowDisplay name="This is us" />
+                </CardDeck>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
                 <ShowDisplay name="Walking dead" />
+                <ShowDisplay name="Breaking bad" />
+                </CardDeck>
             </body>
         )
     }
