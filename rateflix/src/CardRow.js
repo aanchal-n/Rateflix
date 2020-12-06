@@ -1,46 +1,46 @@
 import React,{Component} from 'react';
 import BPimg from './Assets/posters/Movies/Black Panther.jpg';
-import BPaud from './Assets/Songs/Movies-Song/Black Panther.mp3'
+import BPaud from './Assets/Songs/Movies/Black Panther.mp3';
 import JPimg from './Assets/posters/Movies/Jurassic park.jpg';
-import JPaud from './Assets/Songs/Movies-Song/Jurassic park.mp3';
+import JPaud from './Assets/Songs/Movies/Jurassic park.mp3';
 import TBCimg from './Assets/posters/Movies/The breakfast club.jpg';
-import TBCaud from './Assets/Songs/Movies-Song/The breakfast club.mp3';
+import TBCaud from './Assets/Songs/Movies/The breakfast club.mp3';
 import ASIBimg from './Assets/posters/Movies/A star is born.jpg';
-import ASIBaud from './Assets/Songs/Movies-Song/A star is born.mp3';
+import ASIBaud from './Assets/Songs/Movies/A star is born.mp3';
 import TBimg from './Assets/posters/Movies/The bodyguard.jpg';
-import TBaud from './Assets/Songs/Movies-Song/The bodyguard.mp3';
+import TBaud from './Assets/Songs/Movies/The bodyguard.mp3';
 import SWimg from './Assets/posters/Movies/Star wars.jpg';
-import SWaud from './Assets/Songs/Movies-Song/Star wars.mp3';
+import SWaud from './Assets/Songs/Movies/Star wars.mp3';
 import BHimg from './Assets/posters/Movies/Big hero 6.jpg';
-import BHaud from './Assets/Songs/Movies-Song/Big hero 6.mp3';
+import BHaud from './Assets/Songs/Movies/Big hero 6.mp3';
 import LKimg from './Assets/posters/Movies/Lion king.jpg';
-import LKaud from './Assets/Songs/Movies-Song/Lion king.mp3';
+import LKaud from './Assets/Songs/Movies/Lion king.mp3';
 import Mimg from './Assets/posters/Movies/Moana.jpg';
-import Maud from './Assets/Songs/Movies-Song/Moana.mp3';
+import Maud from './Assets/Songs/Movies/Moana.mp3';
 import Simg from './Assets/posters/Movies/Skyfall.jpg';
-import Saud from './Assets/Songs/Movies-Song/Skyfall.mp3';
+import Saud from './Assets/Songs/Movies/Skyfall.mp3';
 import GBimg from './Assets/posters/Movies/Ghostbusters.jpg';
-import GBaud from './Assets/Songs/Movies-Song/Ghostbusters.mp3';
+import GBaud from './Assets/Songs/Movies/Ghostbusters.mp3';
 import DMimg from './Assets/posters/Movies/Despicable me.jpg';
-import DMaud from './Assets/Songs/Movies-Song/Despicable me.mp3';
+import DMaud from './Assets/Songs/Movies/Despicable me.mp3';
 import M8img from './Assets/posters/Movies/8 mile.jpg';
-import M8aud from './Assets/Songs/Movies-Song/8 Mile.mp3';
+import M8aud from './Assets/Songs/Movies/8 Mile.mp3';
 import SOMimg from './Assets/posters/Movies/Sound of music.jpg';
-import SOMaud from './Assets/Songs/Movies-Song/Sound of music.mp3';
+import SOMaud from './Assets/Songs/Movies/Sound of music.mp3';
 import HGimg from './Assets/posters/Movies/Hunger games.jpg';
-import HGaud from './Assets/Songs/Movies-Song/Hunger games.mp3';
+import HGaud from './Assets/Songs/Movies/Hunger games.mp3';
 import HAimg from './Assets/posters/Movies/Home alone.jpg';
-import HAaud from './Assets/Songs/Movies-Song/Home alone.mp3';
+import HAaud from './Assets/Songs/Movies/Home alone.mp3';
 import SPimg from './Assets/posters/Movies/Spiderman.jpeg';
-import SPaud from './Assets/Songs/Movies-Song/Spiderman.mp3';
+import SPaud from './Assets/Songs/Movies/Spiderman.mp3';
 import NYimg from './Assets/posters/Movies/New years eve.jpeg';
-import NYaud from './Assets/Songs/Movies-Song/New years eve.mp3';
+import NYaud from './Assets/Songs/Movies/New years eve.mp3';
 import MAimg from './Assets/posters/Movies/Madagascar.jpg';
-import MAaud from './Assets/Songs/Movies-Song/Madagascar.mp3';
+import MAaud from './Assets/Songs/Movies/Madagascar.mp3';
 import MUimg from './Assets/posters/Movies/Mummy3.jpg';
-import MUaud from './Assets/Songs/Movies-Song/Mummy3.mp3';
+import MUaud from './Assets/Songs/Movies/Mummy3.mp3';
 import JBimg from './Assets/posters/Movies/Jungle book.jpeg';
-import JBaud from './Assets/Songs/Movies-Song/Jungle book.mp3';
+import JBaud from './Assets/Songs/Movies/Jungle book.mp3';
 var path=[{name:'Black Panther',
 			isrc: BPimg,
 			asrc: BPaud,},
@@ -106,6 +106,7 @@ var path=[{name:'Black Panther',
 			 asrc:JBaud,},]
 
 class Card extends Component {
+   
 	render() {
 		var i,imgsrc,audiosrc;
         for(i=0;i<path.length;i++)
@@ -126,18 +127,18 @@ class Card extends Component {
             audio.pause();
         }
 		return (
-		<div class="col s16 m2">
-	      <div class="card red">
-		    <div class="card-image waves-effect waves-block waves-light">
-		  <img class="activator, waves-effect waves-light" alt="Movie" src={imgsrc} width="300" height="300" onMouseEnter={start} onMouseLeave={stop}></img>
+		<div className="col s16 m2">
+	      <div className="card red">
+		    <div className="card-image waves-effect waves-block waves-light">
+		  <img className="activator, waves-effect waves-light" alt="Movie" src={imgsrc} width="300" height="300" onMouseEnter={start} onMouseLeave={stop}></img>
 		</div>
-		<div class="card-content">
-		  <span class="card-title activator grey-text text-darken-4">{this.props.name}<i class="material-icons right">more_vert</i></span>
-		  <p class="tooltipped" data-position="bottom" data-tooltip="7.3"><span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span></p>
+		<div className="card-content">
+		  <span className="card-title activator grey-text text-darken-4">{this.props.name}<i className="material-icons right">more_vert</i></span>
+		  <p class="tooltipped" data-position="bottom" data-tooltip="7.3"><span className="fa fa-star checked"></span>
+			<span className="fa fa-star checked"></span>
+			<span className="fa fa-star checked"></span>
+			<span className="fa fa-star"></span>
+			<span className="fa fa-star"></span></p>
 		</div>
 	  </div>
 	  </div>
@@ -148,7 +149,7 @@ class CardRow extends Component{
     render(){
         return(
 			<div>
-            <div class="row">
+            <div className="row">
 				<Card name="Black Panther"/>
 				<Card name="Jurrasic Park"/>
 				<Card name="The Breakfast Club"/>
@@ -156,7 +157,7 @@ class CardRow extends Component{
 				<Card name="The Bodyguard"/>
 				<Card name="Star Wars"/>
 			</div>
-			<div class="row">
+			<div className="row">
 			<Card name="Big Hero 6"/>
 			<Card name="Lion King"/>
 			<Card name="Moana"/>
@@ -164,7 +165,7 @@ class CardRow extends Component{
 			<Card name="Ghostbusters"/>
             <Card name="Despicable Me"/>
             </div>
-			<div class="row">
+			<div className="row">
 			<Card name="8 Mile"/>
 			<Card name="Sound Of Music"/>
 			<Card name="Hunger Games"/>
@@ -173,7 +174,7 @@ class CardRow extends Component{
             <Card name="New Years Eve"/>
 
             </div>
-			<div class="row">
+			<div className="row">
 			<Card name="Madagascar"/>
 			<Card name="Mummy 3"/>
 			<Card name="Jungle Book"/>
