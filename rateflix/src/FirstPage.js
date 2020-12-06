@@ -9,7 +9,9 @@ const divStyle={
           left: '40%',
     }
 const h1Style={
-    fontSize:'400%'
+    fontSize:'400%',
+    
+    
 }
 const buttonStyle={
     fontSize: '30px',
@@ -17,9 +19,13 @@ const buttonStyle={
 }
 class MyMainPage extends React.Component {
     render () {
-        return (
-                <h1 style={h1Style}> RATEFLIX </h1>)
-    }
+        return (<div className="card-panel">
+                <h1 className="red-text text-darken-2" style={h1Style}> RATEFLIX </h1>
+                </div>
+                
+                )
+                   
+    }          
 }
 
 class MovieButton extends React.Component {
