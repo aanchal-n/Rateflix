@@ -355,8 +355,8 @@ class ShowDisplay extends React.Component {
             width: "300px"
         }
         return (
-            <Card style={{ width: '18rem', flex:1}}>
-            <Card.Img variant="top" src={imgsrc} width="300" height="300" onMouseEnter={start} onMouseLeave={stop}/>
+            <Card style={{ width: '18rem', flex:1, backgroundColor:"black"}}>
+            <Card.Img variant="top" src={imgsrc} width="300" height="300" onMouseEnter={start} onMouseLeave={stop} style={{alignContent:"center"}}/>
             <Card.Body style={cardBodyStyle}>
         <Card.Title style={headerStyle}>{this.props.name} ({year})</Card.Title>
         <Card.Subtitle style={{color:"white"}}> {rating} </Card.Subtitle>
@@ -376,49 +376,49 @@ class Site extends React.Component {
             <body style={bodyStyle}>
                 <Heading />
                 <hr></hr>
-                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 70px'}}>
                 <ShowDisplay name="This is us" />
                 <ShowDisplay name="Friends" />
                 <ShowDisplay name="Stranger Things" />
                 <ShowDisplay name="American horror story" />
                 </CardDeck>
-                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>               
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 70px'}}>               
                 <ShowDisplay name="Brooklyn nine nine" />
                 <ShowDisplay name="Dexter" />
                 <ShowDisplay name="Emily in paris" />
                 <ShowDisplay name="Game of Thrones" />
                 </CardDeck> 
-                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 70px'}}>
                 <ShowDisplay name="Gilmore girls" />
                 <ShowDisplay name="Grey's anatomy" />
                 <ShowDisplay name="How I met your mother" />
                 <ShowDisplay name="Locke and key" />
                 </CardDeck>
-                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 70px'}}>
                 <ShowDisplay name="Lucifer" />
                 <ShowDisplay name="Money heist" />
                 <ShowDisplay name="New girl" />
                 <ShowDisplay name="Peaky blinders" />
                 </CardDeck>
-                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 70px'}}>
                 <ShowDisplay name="Riverdale" />
                 <ShowDisplay name="Scam 1992" />
                 <ShowDisplay name="Star trek discovery" />
                 <ShowDisplay name="Suits" />
                 </CardDeck>
-                <CardDeck style={{display: 'flex', flexDirection: 'row',padding: '25px 50px 25px 75px'}}>
+                <CardDeck style={{display: 'flex', flexDirection: 'row',padding: '25px 50px 25px 70px'}}>
                 <ShowDisplay name="Supernatural" />
                 <ShowDisplay name="The 100" />
                 <ShowDisplay name="The big bang theory" />
                 <ShowDisplay name="The crown" />
                 </CardDeck>
-                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 70px'}}>
                 <ShowDisplay name="The fresh prince of bel air" />
                 <ShowDisplay name="The good doctor" />
                 <ShowDisplay name="The mandalorian" />
                 <ShowDisplay name="The office" />
                 </CardDeck>
-                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 75px'}}>
+                <CardDeck style={{display: 'flex', flexDirection: 'row', padding: '25px 50px 25px 70px'}}>
                 <ShowDisplay name="Walking dead" />
                 <ShowDisplay name="Breaking bad" />
                 </CardDeck>

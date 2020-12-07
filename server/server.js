@@ -17,13 +17,8 @@ connection.once('open', function() {
 })
 
 RateflixRoutes.route('/TVShows').get(function(req, res) {
-    TVShow.find(function(err, TVShows) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.json(TVShows);
-        }
-    });
+    req.url='/tvshowsapi'
+    res.send("TVShows router works")
 });
 
 RateflixRoutes.route('/Movies').get(function(req, res) {

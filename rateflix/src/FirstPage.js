@@ -29,24 +29,19 @@ class MyMainPage extends React.Component {
 }
 
 class MovieButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={TVShowslist:[]}
-    }
+    callAPI() {
+        fetch("http://localhost:4000/Movies")
+        .then(req => req.url="/moviesapi")
+        .catch(err => err)
+    };
+
     componentDidMount() {
-        axios.get('http://localhost:3000/Movies')
-            .then(response => {
-                this.setState({ todos: response.data });
-            })
-            .catch(function (error){
-                console.log(error);
-            })
+        this.callAPI();
     }
       render() {
             return (
               <button style={buttonStyle} onClick={(e) => {
                                   e.preventDefault();
-                                  //window.location.href='./Movies'
                                   ReactDOM.render(
                                       <React.StrictMode>
                                         <Movies/>
@@ -59,24 +54,22 @@ class MovieButton extends React.Component {
     }
 
 class TVShowButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={TVShowslist:[]}
-    }
+    
+    callAPI() {
+        fetch("http://localhost:4000/TVShows")
+        .then(req => req.url="/tvshowsapi")
+        .catch(err => err)
+    };
+
     componentDidMount() {
-        axios.get('http://localhost:3000/TVShows')
-            .then(response => {
-                this.setState({ todos: response.data });
-            })
-            .catch(function (error){
-                console.log(error);
-            })
+        this.callAPI();
     }
+    
     render() {
+        
           return (
             <button style={buttonStyle} onClick={(e) => {
-                                //window.location.href='./TVshows';
-                                ReactDOM.render(
+                ReactDOM.render(
                                     <React.StrictMode>
                                         < TVShows />
                                     </React.StrictMode>,
